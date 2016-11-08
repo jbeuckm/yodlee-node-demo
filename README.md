@@ -23,35 +23,34 @@ Note:
 
 ##Software Requirements : 
 
-#### Node.js Installation and its setup: 
-
-	1 Download the Windows installer from†the†Nodes.jsÆ web site.†
-	2 Run the installer†(the .msi file you downloaded in the previous step.)†
-	3 Follow the prompts in the installer†(Accept the license agreement, click the NEXT button a bunch of times and accept the default installation settings).
-	4 Restart the computer.†Node.jsÆ will not run till the computer is restarted.
-
 #### Steps to execute the code:
 
-1) Go to the cmd prompt and change the current directory to the folder containing the sample apps.
+* Download the module
 
-2) Execute the following command to install the required modules
-	npm install request
-	npm install readline-sync
-	npm install async
-	npm install ursa (In case of errors installing this module, please refer to URL for overcomming those: https://github.com/quartzjer/ursa)
+`npm clone https://github.com/jbeuckm/yodlee-node-demo.git
+`
 
-3) Configure the Yodlee URL and credentials in the file "MainApp.js".
-	Eg: baseURL : 'https://stage.api.yodlee.com/ysl/private-yodlee/v1/'
-		cobrandLogin : 'yodlee',
-	  	cobrandPassword : 'yodlee',
-  		userLogin : 'user',
-  		userPassword : 'account@123'
+* Enter the module folder, install the dependencies
 
-4) For using the PKI enabled account addition options, replace the content of the file "publickey.txt" with the public key content shared.
+```
+cd yodlee-node-demo
+npm install
+```
 
-5) All configuration url and username passwords are mentioned in "config.js" file.
+* Copy the example config file and enter your credentials
 
-6) Run the main app as: "node MainApp.js".
+```
+cp Config.js.example Config.js
+nano Config.js
+```
+
+* Run the app
+
+```
+node MainApp.js
+```
+
+* For using the PKI enabled account addition options, replace the content of the file "publickey.txt" with the public key content shared.
 
 
 ## Code Snippets:
